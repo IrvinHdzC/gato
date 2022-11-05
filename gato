@@ -1,0 +1,442 @@
+VERSION 5.00
+Begin VB.Form Form1 
+   Caption         =   "Game Tutorial 1-TicTacToe"
+   ClientHeight    =   3585
+   ClientLeft      =   60
+   ClientTop       =   450
+   ClientWidth     =   3030
+   LinkTopic       =   "Form1"
+   ScaleHeight     =   3585
+   ScaleWidth      =   3030
+   StartUpPosition =   3  'Windows Default
+   Begin VB.CommandButton Command2 
+      Caption         =   "Go !"
+      Height          =   495
+      Left            =   2040
+      TabIndex        =   15
+      Top             =   3000
+      Width           =   735
+   End
+   Begin VB.TextBox Text1 
+      Height          =   285
+      Left            =   360
+      TabIndex        =   14
+      Text            =   "Text1"
+      Top             =   3720
+      Width           =   2055
+   End
+   Begin VB.CommandButton Command1 
+      Caption         =   "New Game"
+      Height          =   495
+      Left            =   120
+      TabIndex        =   13
+      Top             =   3000
+      Width           =   855
+   End
+   Begin VB.PictureBox Picture2 
+      Height          =   855
+      Index           =   2
+      Left            =   4920
+      Picture         =   "Form1.frx":0000
+      ScaleHeight     =   795
+      ScaleWidth      =   795
+      TabIndex        =   12
+      Top             =   360
+      Width           =   855
+   End
+   Begin VB.PictureBox Picture2 
+      Height          =   855
+      Index           =   1
+      Left            =   4080
+      ScaleHeight     =   795
+      ScaleWidth      =   795
+      TabIndex        =   11
+      Top             =   360
+      Width           =   855
+   End
+   Begin VB.PictureBox Picture2 
+      Height          =   855
+      Index           =   0
+      Left            =   3240
+      Picture         =   "Form1.frx":290A
+      ScaleHeight     =   795
+      ScaleWidth      =   795
+      TabIndex        =   10
+      Top             =   360
+      Width           =   855
+   End
+   Begin VB.PictureBox container1 
+      BackColor       =   &H80000012&
+      BorderStyle     =   0  'None
+      Height          =   2775
+      Left            =   120
+      ScaleHeight     =   2775
+      ScaleWidth      =   2775
+      TabIndex        =   0
+      Top             =   120
+      Width           =   2775
+      Begin VB.PictureBox Picture1 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   0  'None
+         ForeColor       =   &H80000008&
+         Height          =   855
+         Index           =   0
+         Left            =   0
+         ScaleHeight     =   855
+         ScaleWidth      =   855
+         TabIndex        =   9
+         Top             =   0
+         Width           =   855
+      End
+      Begin VB.PictureBox Picture1 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   0  'None
+         ForeColor       =   &H80000008&
+         Height          =   855
+         Index           =   1
+         Left            =   960
+         ScaleHeight     =   855
+         ScaleWidth      =   855
+         TabIndex        =   8
+         Top             =   0
+         Width           =   855
+      End
+      Begin VB.PictureBox Picture1 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   0  'None
+         ForeColor       =   &H80000008&
+         Height          =   855
+         Index           =   2
+         Left            =   1920
+         ScaleHeight     =   855
+         ScaleWidth      =   855
+         TabIndex        =   7
+         Top             =   0
+         Width           =   855
+      End
+      Begin VB.PictureBox Picture1 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   0  'None
+         ForeColor       =   &H80000008&
+         Height          =   855
+         Index           =   3
+         Left            =   0
+         ScaleHeight     =   855
+         ScaleWidth      =   855
+         TabIndex        =   6
+         Top             =   960
+         Width           =   855
+      End
+      Begin VB.PictureBox Picture1 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   0  'None
+         ForeColor       =   &H80000008&
+         Height          =   855
+         Index           =   4
+         Left            =   960
+         ScaleHeight     =   855
+         ScaleWidth      =   855
+         TabIndex        =   5
+         Top             =   960
+         Width           =   855
+      End
+      Begin VB.PictureBox Picture1 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   0  'None
+         ForeColor       =   &H80000008&
+         Height          =   855
+         Index           =   5
+         Left            =   1920
+         ScaleHeight     =   855
+         ScaleWidth      =   855
+         TabIndex        =   4
+         Top             =   960
+         Width           =   855
+      End
+      Begin VB.PictureBox Picture1 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   0  'None
+         ForeColor       =   &H80000008&
+         Height          =   855
+         Index           =   6
+         Left            =   0
+         ScaleHeight     =   855
+         ScaleWidth      =   855
+         TabIndex        =   3
+         Top             =   1920
+         Width           =   855
+      End
+      Begin VB.PictureBox Picture1 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   0  'None
+         ForeColor       =   &H80000008&
+         Height          =   855
+         Index           =   7
+         Left            =   960
+         ScaleHeight     =   855
+         ScaleWidth      =   855
+         TabIndex        =   2
+         Top             =   1920
+         Width           =   855
+      End
+      Begin VB.PictureBox Picture1 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   0  'None
+         ForeColor       =   &H80000008&
+         Height          =   855
+         Index           =   8
+         Left            =   1920
+         ScaleHeight     =   855
+         ScaleWidth      =   855
+         TabIndex        =   1
+         Top             =   1920
+         Width           =   855
+      End
+   End
+End
+Attribute VB_Name = "Form1"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Dim GameBoard(8) As Integer
+Dim stm As Integer
+Dim nc
+Public Sub PrintPosition()
+Dim i As Long
+For i = 0 To 8
+Picture1(i).Picture = Picture2(GameBoard(i) + 1).Picture
+Next i
+End Sub
+Public Sub doMove(mov As Integer)
+GameBoard(mov) = stm
+stm = -stm
+End Sub
+Public Sub undoMove(mov As Integer)
+GameBoard(mov) = 0
+stm = -stm
+End Sub
+
+Private Sub Command1_Click()
+NewGame
+PrintPosition
+End Sub
+
+Private Sub Command2_Click()
+If (won() <> 1000) Then
+t1 = Timer
+nc = 0
+m = RootSearch
+t2 = Timer
+Text1.Text = nc
+If m <> -1 Then
+doMove (m)
+End If
+End If
+PrintPosition
+End Sub
+
+Private Sub Form_Load()
+stm = 1
+End Sub
+
+Private Sub Picture1_Click(Index As Integer)
+If (GameBoard(Index) = 0) And (won() <> 1000) Then
+doMove (Index)
+End If
+PrintPosition
+If (won() <> 1000) Then
+t1 = Timer
+nc = 0
+m = RootSearch
+t2 = Timer
+Text1.Text = nc
+If m <> -1 Then
+doMove (m)
+End If
+End If
+PrintPosition
+End Sub
+
+Private Sub NewGame()
+      For i = 0 To 8
+              GameBoard(i) = 0
+     Next i
+      stm = 1
+End Sub
+Public Function won()
+    If GameBoard(4) = 1 Then
+          If GameBoard(0) = 1 Then
+                If GameBoard(8) = 1 Then
+                    won = 1000
+                    Exit Function
+                End If
+         End If
+          If GameBoard(1) = 1 Then
+                If GameBoard(7) = 1 Then
+                    won = 1000
+                    Exit Function
+                End If
+         End If
+           If GameBoard(2) = 1 Then
+                If GameBoard(6) = 1 Then
+                    won = 1000
+                    Exit Function
+                End If
+         End If
+           If GameBoard(3) = 1 Then
+                If GameBoard(5) = 1 Then
+                    won = 1000
+                    Exit Function
+                End If
+         End If
+    End If
+    If GameBoard(0) = 1 Then
+          If GameBoard(1) = 1 Then
+                If GameBoard(2) = 1 Then
+                    won = 1000
+                    Exit Function
+                End If
+         End If
+          If GameBoard(3) = 1 Then
+                If GameBoard(6) = 1 Then
+                    won = 1000
+                    Exit Function
+                End If
+         End If
+    End If
+    If GameBoard(8) = 1 Then
+          If GameBoard(7) = 1 Then
+                If GameBoard(6) = 1 Then
+                    won = 1000
+                    Exit Function
+                End If
+         End If
+          If GameBoard(5) = 1 Then
+                If GameBoard(2) = 1 Then
+                    won = 1000
+                    Exit Function
+                End If
+         End If
+    End If
+    
+    
+    If GameBoard(4) = -1 Then
+          If GameBoard(0) = -1 Then
+                If GameBoard(8) = -1 Then
+                    won = 1000
+                    Exit Function
+                End If
+         End If
+          If GameBoard(1) = -1 Then
+                If GameBoard(7) = -1 Then
+                    won = 1000
+                    Exit Function
+                End If
+         End If
+           If GameBoard(2) = -1 Then
+                If GameBoard(6) = -1 Then
+                    won = 1000
+                    Exit Function
+                End If
+         End If
+           If GameBoard(3) = -1 Then
+                If GameBoard(5) = -1 Then
+                    won = 1000
+                    Exit Function
+                End If
+         End If
+    End If
+    If GameBoard(0) = -1 Then
+          If GameBoard(1) = -1 Then
+                If GameBoard(2) = -1 Then
+                    won = 1000
+                    Exit Function
+                End If
+         End If
+          If GameBoard(3) = -1 Then
+                If GameBoard(6) = -1 Then
+                    won = 1000
+                    Exit Function
+                End If
+         End If
+    End If
+    If GameBoard(8) = -1 Then
+          If GameBoard(7) = -1 Then
+                If GameBoard(6) = -1 Then
+                    won = 1000
+                    Exit Function
+                End If
+         End If
+          If GameBoard(5) = -1 Then
+                If GameBoard(2) = -1 Then
+                    won = 1000
+                    Exit Function
+                End If
+         End If
+    End If
+End Function
+Public Function RootSearch()
+Dim i As Integer
+Dim fm As Long
+Dim best As Long
+Dim bm As Long
+Dim score As Long
+fm = 0
+score = -100000
+best = score
+
+For i = 0 To 8
+If GameBoard(i) = 0 Then
+fm = fm + 1
+score = -MiniMax(i)
+If score > best Then
+best = score
+bm = i
+End If
+End If
+Next i
+If fm = 0 Then
+bm = -1
+End If
+RootSearch = bm
+End Function
+Public Function MiniMax(mov As Integer)
+Dim i As Integer
+Dim fm As Long
+Dim score As Long
+fm = 0
+nc = nc + 1
+score = -100000
+doMove (mov)
+If won() = 1000 Then
+MiniMax = -1000
+undoMove (mov)
+Exit Function
+End If
+For i = 0 To 8
+If GameBoard(i) = 0 Then
+fm = fm + 1
+score = Max(-MiniMax(i), score)
+End If
+Next i
+If fm = 0 Then
+score = 0
+End If
+MiniMax = score
+undoMove (mov)
+End Function
+Public Function Max(a As Long, b As Long)
+Max = b
+If a > b Then Max = a
+End Function
+
